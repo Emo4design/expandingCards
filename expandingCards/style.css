@@ -1,0 +1,59 @@
+ *{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif; 
+    background-color: rgb(29, 29, 29);
+    color: aliceblue;
+    text-align: center;
+
+}
+
+.logo{
+    width: 100px;
+    margin: 20px;
+    float: left;
+  
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh; 
+    overflow: hidden;
+    margin: 0;
+    width: 90vw;
+}
+
+.panel{
+    background-size:auto 100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aliceblue;
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+ 
+.panel h2{
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.panel.active h2{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+} 
+
